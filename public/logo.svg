@@ -1,0 +1,84 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      #logo-bg { fill: #1E293B; }
+      #primary-gradient stop { stop-color: #60A5FA; }
+      #primary-gradient stop:last-child { stop-color: #3B82F6; }
+      #secondary-gradient stop { stop-color: #93C5FD; }
+      #secondary-gradient stop:last-child { stop-color: #60A5FA; }
+      .accent-circle { stroke: rgba(255, 255, 255, 0.1); }
+    }
+    @media (prefers-color-scheme: light) {
+      #logo-bg { fill: #F1F5F9; }
+      #primary-gradient stop { stop-color: #1E40AF; }
+      #primary-gradient stop:last-child { stop-color: #2563EB; }
+      #secondary-gradient stop { stop-color: #1D4ED8; }
+      #secondary-gradient stop:last-child { stop-color: #2563EB; }
+      .accent-circle { stroke: rgba(0, 0, 0, 0.1); }
+    }
+  </style>
+
+  <!-- Elegant gradients -->
+  <defs>
+    <linearGradient id="primary-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" />
+      <stop offset="100%" />
+    </linearGradient>
+    
+    <linearGradient id="secondary-gradient" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" />
+      <stop offset="100%" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background shape -->
+  <rect id="logo-bg" width="120" height="120" rx="28" />
+  
+  <!-- Abstract AI representation -->
+  <path
+    d="M40 60C40 46.7452 50.7452 36 64 36C77.2548 36 88 46.7452 88 60C88 73.2548 77.2548 84 64 84"
+    stroke="url(#primary-gradient)"
+    stroke-width="6"
+    stroke-linecap="round"
+  >
+    <animate
+      attributeName="stroke-dasharray"
+      values="0 1000;250 1000"
+      dur="1.5s"
+      fill="freeze"
+    />
+  </path>
+
+  <!-- Dot accent -->
+  <circle 
+    cx="64" 
+    cy="60" 
+    r="4" 
+    fill="url(#secondary-gradient)"
+  >
+    <animate
+      attributeName="r"
+      values="0;4"
+      dur="0.5s"
+      fill="freeze"
+    />
+  </circle>
+
+  <!-- Modern abstract lines -->
+  <path
+    d="M40 60L88 60"
+    stroke="url(#primary-gradient)"
+    stroke-width="6"
+    stroke-linecap="round"
+    opacity="0.3"
+  />
+
+  <!-- Subtle accent details -->
+  <circle 
+    cx="64" 
+    cy="60" 
+    r="28" 
+    class="accent-circle"
+    stroke-width="0.5" 
+  />
+</svg>
